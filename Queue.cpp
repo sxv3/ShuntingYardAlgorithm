@@ -1,4 +1,5 @@
 #include "Queue.h"
+#include <iostream>
 
 //queue class implementation file
 //by Tai Wong March 7th

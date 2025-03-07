@@ -1,38 +1,36 @@
 #include "Stack.h"
+#include <iostream>
 
 //Stack class implementation
 //Created by Tai Wong, March 6th
 
 Stack::Stack() {
-  top = NULL;
+  top = nullptr;
 }
 
-void Stack::push(char data) {
-  Node* newNode = new Node(data);
-  newNode->next = top;
-  top = newNode;
+void Stack::push(Node* node) {
+  node->next = top;
+  top = node;
 }
 
-char Stack::pop() {
+Node* Stack::pop() {
   if (isEmpty()) {
-    return '\0'; //null character if stack is empty
+    return nullptr;
   }
 
   Node* temp = top;
-  char data = temp->data;
   top = top->next;
-  delete temp;
-  return data;
+  return temp;
 }
 
-char Stack::peek() {
+Node* Stack::peek() {
   if (isEmpty()) {
-    return '\0';
+    return nullptr;
   } else {
-    return top->data;
+    return top;
   }
 }
 
 bool Stack::isEmpty() {
-  return top == NULL;
+  return top == nullptr;
 }
