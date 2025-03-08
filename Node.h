@@ -6,11 +6,13 @@
 
 class Node {
 public:
+  //stores the character inputtd by user for expression tree
   char data;
+  //nodes for linked list
   Node* next;
   Node* left;
   Node* right;
-
+  //constructor
   Node(char data);
   
 };

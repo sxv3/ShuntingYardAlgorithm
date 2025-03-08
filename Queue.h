@@ -7,13 +7,13 @@
 
 class Queue {
 public:
-  Node* front;
-  Node* rear;
+  Node* front; // points to first element
+  Node* rear; // points to last element
 
-  Queue();
-  void enqueue(char data);
-  char dequeue();
-  bool isEmpty();
+  Queue(); // constructor
+  void enqueue(char data); //adds element to end of the queue
+  char dequeue(); // removes and return the front element of queue
+  bool isEmpty(); // checks if queue is empty
 };
 
 #endif
